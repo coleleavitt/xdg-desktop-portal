@@ -1,0 +1,578 @@
+# Instincts generated from https://github.com/coleleavitt/xdg-desktop-portal
+# Generated: 2026-08-01T01:56:04.909Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: xdg-desktop-portal-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Commit Length
+
+## Action
+
+Write moderate-length commit messages (~53 characters)
+
+## Evidence
+
+- Average commit message length: 53 chars
+- Based on 19 commits
+
+---
+id: xdg-desktop-portal-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: xdg-desktop-portal-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: xdg-desktop-portal-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: xdg-desktop-portal-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: xdg-desktop-portal-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: xdg-desktop-portal-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~13x per month
+- Files: **/*.test.*
+
+---
+id: xdg-desktop-portal-workflow-add-new-portal-implementation-using-futures
+trigger: "when doing add new portal implementation using futures"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Workflow Add New Portal Implementation Using Futures
+
+## Action
+
+Follow the add-new-portal-implementation-using-futures workflow:
+1. Create new .c and .h files for the component (e.g., xdp-request-dex.c/h, xdp-session-dex.c/h).
+2. Update desktop-portal/meson.build to include the new source files.
+3. Implement the async logic using futures/fibers in the new files.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: desktop-portal/meson.build, desktop-portal/xdp-*-dex.c, desktop-portal/xdp-*-dex.h
+
+---
+id: xdg-desktop-portal-workflow-refactor-portal-method-signatures-across-multiple-portals
+trigger: "when doing refactor portal method signatures across multiple portals"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Workflow Refactor Portal Method Signatures Across Multiple Portals
+
+## Action
+
+Follow the refactor-portal-method-signatures-across-multiple-portals workflow:
+1. Update several portal .c files to use the new method signature or interface.
+2. Update shared or core header/source files to support the new pattern.
+3. Update the corresponding header files if needed.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: desktop-portal/*.c, desktop-portal/*.h, shared/*.c
+
+---
+id: xdg-desktop-portal-workflow-migrate-or-cleanup-documentation-and-website
+trigger: "when doing migrate or cleanup documentation and website"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Workflow Migrate Or Cleanup Documentation And Website
+
+## Action
+
+Follow the migrate-or-cleanup-documentation-and-website workflow:
+1. Move or copy content between README.md, doc/, and doc/website/ files.
+2. Delete obsolete website or documentation files.
+3. Update or simplify language in documentation and README.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: README.md, doc/**, doc/website/**
+
+---
+id: xdg-desktop-portal-workflow-add-or-improve-tests-for-new-features-or-bugfixes
+trigger: "when doing add or improve tests for new features or bugfixes"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Workflow Add Or Improve Tests For New Features Or Bugfixes
+
+## Action
+
+Follow the add-or-improve-tests-for-new-features-or-bugfixes workflow:
+1. Add new test files (e.g., test_shutdown.py).
+2. Update test utilities or configuration (e.g., conftest.py, xdp_utils.py).
+3. Update tests/meson.build to include new tests.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: tests/*.py, tests/meson.build
+
+---
+id: xdg-desktop-portal-instinct-filename-camelcase
+trigger: "When creating or renaming source files."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Filename Camelcase
+
+## Action
+
+Name files using camelCase (e.g., xdpRequestDex.c).
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- desktop-portal/xdp-request-dex.c
+
+---
+id: xdg-desktop-portal-instinct-function-camelcase
+trigger: "When defining new functions."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Function Camelcase
+
+## Action
+
+Name functions using camelCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: xdg-desktop-portal-instinct-class-pascalcase
+trigger: "When defining new classes."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Class Pascalcase
+
+## Action
+
+Name classes using PascalCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: xdg-desktop-portal-instinct-constant-screaming-snake
+trigger: "When defining constants."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Constant Screaming Snake
+
+## Action
+
+Name constants using SCREAMING_SNAKE_CASE.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: xdg-desktop-portal-instinct-relative-imports
+trigger: "When importing modules."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Relative Imports
+
+## Action
+
+Use relative import paths.
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: xdg-desktop-portal-instinct-named-exports
+trigger: "When exporting modules or functions."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Named Exports
+
+## Action
+
+Use named exports.
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: xdg-desktop-portal-instinct-test-file-pattern
+trigger: "When adding new test files."
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Test File Pattern
+
+## Action
+
+Name test files with the pattern *.test.ts.
+
+## Evidence
+
+- Pattern in testing.filePattern
+
+---
+id: xdg-desktop-portal-instinct-test-location-separate
+trigger: "When organizing tests."
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Test Location Separate
+
+## Action
+
+Place test files in the separate tests/ directory.
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- tests/*.py
+
+---
+id: xdg-desktop-portal-instinct-add-test-for-feature
+trigger: "When implementing a new feature or bugfix."
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Add Test For Feature
+
+## Action
+
+Add or update tests to cover the new feature or bugfix.
+
+## Evidence
+
+- Workflow: add-or-improve-tests-for-new-features-or-bugfixes
+- Commit: tests: Make it possible for tests to capture stderr/stdout of xdp
+
+---
+id: xdg-desktop-portal-instinct-update-test-utilities
+trigger: "When adding new tests."
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Update Test Utilities
+
+## Action
+
+Update test utilities or configuration (e.g., conftest.py, xdp_utils.py) as needed.
+
+## Evidence
+
+- Workflow: add-or-improve-tests-for-new-features-or-bugfixes
+
+---
+id: xdg-desktop-portal-instinct-commit-prefix
+trigger: "When writing a commit message."
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with the relevant area (e.g., doc:, context:, tests:, permission:, xdp:, session:, dex:, ci:, secret:).
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Examples: doc: Streamline the documentation/README/website
+
+---
+id: xdg-desktop-portal-instinct-commit-length
+trigger: "When writing a commit message."
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 50-60 characters.
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: xdg-desktop-portal-instinct-commit-freeform-description
+trigger: "When writing a commit message."
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Commit Freeform Description
+
+## Action
+
+Describe the change in a freeform, imperative style after the prefix.
+
+## Evidence
+
+- Pattern in commits.type
+- Examples: context: Make dispatching DBus interface skeletons in threads explicit
+
+---
+id: xdg-desktop-portal-instinct-add-async-portal-component
+trigger: "When someone wants to add a new async/fiber-based implementation for a portal component."
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Add Async Portal Component
+
+## Action
+
+Create new .c and .h files for the component, update meson.build, and implement async logic using futures/fibers.
+
+## Evidence
+
+- Workflow: add-new-portal-implementation-using-futures
+- Commits: Create new .c and .h files for the component (e.g., xdp-request-dex.c/h, xdp-session-dex.c/h).
+
+---
+id: xdg-desktop-portal-instinct-refactor-portal-methods
+trigger: "When someone wants to change how multiple portals handle method calls or data passing."
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Refactor Portal Methods
+
+## Action
+
+Update several portal .c files and shared/core header/source files to use the new method signature or interface.
+
+## Evidence
+
+- Workflow: refactor-portal-method-signatures-across-multiple-portals
+- Commits: Update several portal .c files to use the new method signature or interface.
+
+---
+id: xdg-desktop-portal-instinct-migrate-docs
+trigger: "When someone wants to reorganize or de-duplicate documentation and website content."
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Migrate Docs
+
+## Action
+
+Move or copy content between README.md, doc/, and doc/website/, delete obsolete files, and update/simplify language.
+
+## Evidence
+
+- Workflow: migrate-or-cleanup-documentation-and-website
+- Commits: doc: Drop the website on favor of the documentation
+
+---
+id: xdg-desktop-portal-instinct-add-test
+trigger: "When someone wants to ensure new features or fixes are tested."
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: coleleavitt/xdg-desktop-portal
+---
+
+# Xdg Desktop Portal Instinct Add Test
+
+## Action
+
+Add new test files, update test utilities/configuration, and update tests/meson.build to include new tests.
+
+## Evidence
+
+- Workflow: add-or-improve-tests-for-new-features-or-bugfixes
+- Commits: Add new test files (e.g., test_shutdown.py).
+
