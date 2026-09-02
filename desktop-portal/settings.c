@@ -16,6 +16,7 @@
 
 #include "xdp-context.h"
 #include "xdp-dbus.h"
+#include "xdp-dex.h"
 #include "xdp-impl-dbus.h"
 #include "xdp-portal-config.h"
 #include "xdp-utils.h"
